@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-amber-800">Factura</h1>
+            <span class="text-gray-500">#000123</span>
+        </div>
+        <div class="mb-6">
+            <p class="font-semibold text-gray-700">Cliente:</p>
+            <p>Juan Pérez</p>
+            <p>Correo: juan.perez@email.com</p>
+            <p>Fecha: 2025-06-01</p>
+        </div>
+        <table class="min-w-full mb-6">
+            <thead>
+                <tr class="bg-amber-100">
+                    <th class="py-2 px-4 text-left">Producto</th>
+                    <th class="py-2 px-4 text-right">Cantidad</th>
+                    <th class="py-2 px-4 text-right">Precio</th>
+                    <th class="py-2 px-4 text-right">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-2 px-4">Café Espresso</td>
+                    <td class="py-2 px-4 text-right">2</td>
+                    <td class="py-2 px-4 text-right">$50</td>
+                    <td class="py-2 px-4 text-right">$100</td>
+                </tr>
+                <tr>
+                    <td class="py-2 px-4">Café Americano</td>
+                    <td class="py-2 px-4 text-right">1</td>
+                    <td class="py-2 px-4 text-right">$40</td>
+                    <td class="py-2 px-4 text-right">$40</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="font-bold">
+                    <td colspan="3" class="py-2 px-4 text-right">Total</td>
+                    <td class="py-2 px-4 text-right">$140</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="text-right text-gray-500 text-sm">
+            Gracias por su compra.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Proveedores</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: url('/img/Portada.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        </style>
+</head>
+<body>
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="bg-white bg-opacity-95 p-8 rounded-2xl shadow-lg w-full max-w-3xl">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Lista de Proveedores</h2>
+                <a href="/formularioProveedor" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    Agregar Proveedor
+                </a>
+            </div>
+            <table class="min-w-full border border-gray-300 rounded overflow-hidden shadow">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b text-center">Nombre</th>
+                        <th class="py-2 px-4 border-b text-center">Dirección</th>
+                        <th class="py-2 px-4 border-b text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="proveedor : ${proveedores}" class="hover:bg-gray-100">
+                        <td class="py-2 px-4 border-b text-center" th:text="${proveedor.nombre}">Nombre</td>
+                        <td class="py-2 px-4 border-b text-center" th:text="${proveedor.direccion}">Dirección</td>
+                        <td class="py-2 px-4 border-b text-center">
+                            <a
+                               class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-700 transition"
+                               onclick="return confirm('¿Estás seguro de eliminar este proveedor?');">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+

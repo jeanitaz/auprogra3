@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raíz & Grano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: url('/img/Portada.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<header class="flex justify-between items-center p-6 max-w-7xl mx-auto">
+    <div class="text-2xl font-bold text-white"><strong>Raíz & Grano 🌿</strong></div>
+    <div class="space-x-4">
+        <a href="/index">
+            <button
+                    class="px-4 py-2 border rounded text-white transition-colors duration-300"
+                    style="border-color: #8B5C2A; background-color: #8B5C2A;"
+                    onmouseover="this.style.backgroundColor='#A9744F'; this.style.color='#white';"
+                    onmouseout="this.style.backgroundColor='#8B5C2A'; this.style.color='white';"
+            >
+                Inicio
+            </button>
+        </a>
+        <a href="/login">
+            <button
+                    class="px-4 py-2 border rounded text-white transition-colors duration-300"
+                    style="border-color: #8B5C2A; background-color: #8B5C2A;"
+                    onmouseover="this.style.backgroundColor='#A9744F'; this.style.color='#white';"
+                    onmouseout="this.style.backgroundColor='#8B5C2A'; this.style.color='white';"
+            >
+                Cliente
+            </button>
+        </a>
+        <a href="/loginProveedor">
+            <button
+                    class="px-4 py-2 border rounded text-white transition-colors duration-300"
+                    style="border-color: #8B5C2A; background-color: #8B5C2A;"
+                    onmouseover="this.style.backgroundColor='#A9744F'; this.style.color='#white';"
+                    onmouseout="this.style.backgroundColor='#8B5C2A'; this.style.color='white';"
+            >
+                Proveedor
+            </button>
+        </a>
+    </div>
+</header>
+<br><br><br><br><br>
+<section id="login" class="w-full">
+    <h2 class="text-3xl font-bold mb-6 text-center text-white">Iniciar sesión</h2>
+    <form class="bg-white bg-opacity-90 p-8 rounded-2xl shadow-lg max-w-md mx-auto space-y-6">
+        <div>
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Correo:</label>
+            <input type="email" id="email" required
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600"/>
+        </div>
+        <div>
+            <label for="password" class="block text-gray-700 font-semibold mb-2">Contraseña:</label>
+            <input type="password" id="password" required
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600"/>
+        </div>
+        <a href="/proveedores" th:href="@{/proveedores}"
+           class="w-full block py-2 px-4 bg-amber-700 text-white font-bold rounded-lg text-center hover:bg-amber-800 transition-colors">
+            Iniciar sesión
+        </a>
+    </form>
+</section>
+<br><br><br><br>
+<br><br><br><br>
+<footer class="mt-auto p-4 dark:bg-gray-800 md:p-6 lg:p-10">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            Raíz & Grano 🌿
+        </a>>
+        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Acerca</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Campañas</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Contacto</a>
+            </li>
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="#"
+                                                                                        class="hover:underline">Raíz & Grano™</a>. Todos los Derechos Reservados.</span>
+    </div>
+</footer>
+</body>
+</html>
