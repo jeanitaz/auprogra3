@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Registro de Cliente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: url('/img/Portada.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
-$END$
+<header class="flex justify-between items-center p-6 max-w-7xl mx-auto">
+    <div class="text-2xl font-bold text-white"><strong>Raíz & Grano 🌿</strong></div>
+    <div class="space-x-4">
+        <a href="/index">
+            <button
+                    class="px-4 py-2 border rounded text-white transition-colors duration-300"
+                    style="border-color: #8B5C2A; background-color: #8B5C2A;"
+                    onmouseover="this.style.backgroundColor='#A9744F'; this.style.color='#white';"
+                    onmouseout="this.style.backgroundColor='#8B5C2A'; this.style.color='white';"
+            >
+                Inicio
+            </button>
+        </a>
+        <a href="/login">
+            <button
+                    class="px-4 py-2 border rounded text-white transition-colors duration-300"
+                    style="border-color: #8B5C2A; background-color: #8B5C2A;"
+                    onmouseover="this.style.backgroundColor='#A9744F'; this.style.color='#white';"
+                    onmouseout="this.style.backgroundColor='#8B5C2A'; this.style.color='white';"
+            >
+                Cliente
+            </button>
+        </a>
+    </div>
+</header>
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white max-w-md w-full p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-amber-700 mb-6 text-center">Registro de Cliente</h2>
+        <form action="/registro" method="post" class="space-y-4">
+            <div>
+                <label for="nombre" class="block text-gray-700 font-semibold mb-1">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <div>
+                <label for="apellido" class="block text-gray-700 font-semibold mb-1">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700 font-semibold mb-1">Correo electrónico</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <div>
+                <label for="telefono" class="block text-gray-700 font-semibold mb-1">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <div>
+                <label for="direccion" class="block text-gray-700 font-semibold mb-1">Dirección</label>
+                <input type="text" id="direccion" name="direccion" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 rounded transition">Guardar Cliente</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long codigo;
+    private Long id;
 
     private String nombre;
     private Double precioUnitario;
 
     @ManyToOne
-    @JoinColumn(name="codigo_proveedor")
+    @JoinColumn(name="id_proveedor")
     private Proveedor proveedor;
 }
